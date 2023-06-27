@@ -1,6 +1,4 @@
-package com.callor.hello;
-
-import java.util.Locale;
+package com.callor.hello.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,16 +8,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Handles requests for the application home page.
  */
+
 @Controller
 public class HomeController {
 	
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String home( Model model) {
 
-//		log.info
-//		log.debug("hi");
+
 		return "home";
 	}
+
 	
 }
