@@ -2,11 +2,14 @@
 	pageEncoding="UTF-8"%>
 
 <form method="POST" class="main input">
-	
+
 	<fieldset>
-	<legend>주소 추가</legend>
+		<legend>주소 추가</legend>
 		<div>
 			<label>ID</label> <input name="a_id">
+		</div>
+		<div class="message a_id">
+			<label></label><span></span>
 		</div>
 		<div>
 			<label>이름</label> <input name="a_name">
