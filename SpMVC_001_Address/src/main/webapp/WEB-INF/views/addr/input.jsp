@@ -14,11 +14,20 @@
 		<div>
 			<label>이름</label> <input name="a_name">
 		</div>
+		<div class="message a_name">
+			<label></label><span></span>
+		</div>
 		<div>
 			<label>전화번호</label> <input name="a_tel">
 		</div>
+		<div class="message a_tel">
+			<label></label><span></span>
+		</div>
 		<div>
 			<label>주소</label> <input name="a_addr">
+		</div>
+		<div class="message a_addr">
+			<label></label><span></span>
 		</div>
 		<div>
 			<label></label>
