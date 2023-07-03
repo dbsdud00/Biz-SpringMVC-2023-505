@@ -106,13 +106,60 @@ public class HomeController {
 //			return "FAIL";
 //		}
 	}
-	
+	/*
+	 *  localhost:8080/addr/detail?id=A0001 형식으로 request 가 오면
+	 *  id = A0001 에 설정된 A0001 값을 id 매개변수로 받는다.
+	 *  URL : localhost:8080/addr/detail
+	 *  queryString = ?id=A0001
+	 */
 	@RequestMapping(value="/detail", method=RequestMethod.GET)
 	public String detail(Model model ,String id) {
+		// request 에 설정된 id 값으로 DB table 에서 주소정보를 SELECT
 		AddrDto addrDto = addrService.findById(id);
+		
+		// SELECT 된 주소를 model 에 담아서 view 로 전달
 		model.addAttribute("ADDR",addrDto);
+		
+		// home.jsp 에 include 되어 보여질 화면 세팅
 		model.addAttribute("BODY","DETAIL");
 		return "home";
+	}
+	
+	@RequestMapping(value = "/delete" , method=RequestMethod.GET)
+	public String delete(String id) {
+		int result = addrService.delete(id);
+		if (result > 0) {
+			return "redirect:/";
+		} else {
+			// 삭제를 실패했을 경우
+			// 현재 id 의 detail 화면으로 되돌아가라
+			return "redirect:/detail?id="+id;
+		}
+	}
+	
+	// 데이터 Update 할 화면 보여주기
+	// Spring 에서는 RequestMapping 을 참조하여
+	// 		update Getter method 라고 부른다.
+	@RequestMapping(value = "/update" , method=RequestMethod.GET)
+	public String update(Model model, String id) {
+		// 변경할 주소 데이터 SELECT 하여 model 에 담기
+		AddrDto addrDto = addrService.findById(id);
+		model.addAttribute("ADDR",addrDto);
+		model.addAttribute("BODY", "UPDATE");
+		return "home";
+	}
+	
+	@RequestMapping(value = "/update" , method=RequestMethod.POST , produces = "text/html;charset=UTF-8")
+	public String update(@ModelAttribute AddrDto addrDto) {
+		int result = addrService.update(addrDto);
+		String id = addrDto.getA_id();
+		// 업데이트가 성공하면 detail 화면을 보여서 변경된 것을 확인
+		if (result > 0) {
+			return "redirect:/detail?id="+id;
+		// 업데이트가 실패하면 다시 update 화면으로 보내서 다시 변경하기
+		} else {
+			return "redirect:/update?id="+id;
+		}
 	}
 	
  
