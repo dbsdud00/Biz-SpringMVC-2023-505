@@ -4,12 +4,12 @@
 
 
 <c:set value="${pageContext.request.contextPath}" var="rootPath" />
-<c:set value="20230703-029" var="version" />
+<c:set value="20230704-014" var="version" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>주소록 프로젝트 2023</title>
+<title>나의 주소록</title>
 <link href="${rootPath}/static/css/main.css?${version}" rel="stylesheet">
 <link href="${rootPath}/static/css/nav.css?${version}" rel="stylesheet">
 <link href="${rootPath}/static/css/table.css?${version}"
@@ -22,6 +22,7 @@
 	rel="stylesheet">
 <link href="${rootPath}/static/css/user/login.css?${version}"
 	rel="stylesheet">
+
 <script>
 	// JSP 에서 사용하는 rootPath 변수를 
 	// JS 코드에서 사용하기 위한 rootPath 변수로 재설정
@@ -60,4 +61,9 @@
 		<address>CopyRight &copy; dbsdudsw@icloud.com</address>
 	</footer>
 </body>
+<c:if test="${MSG == 'LOGOUT'}">
+	<script>
+		alert("로그아웃 되었습니다.")
+	</script>
+</c:if>
 </html>
