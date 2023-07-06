@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+div.main {
+  width: 80%;
+  margin: 5px auto;
+}
+
+div.main.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.main.pagination ul {
+  display: flex;
+  list-style: none;
+}
+
+div.main.pagination li {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  margin: 3px;
+  margin-left: -1px;
+  color: blue;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+}
+div.main.pagination li:hover {
+  background-color: #ddd;
+}
