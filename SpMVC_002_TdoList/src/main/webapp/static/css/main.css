@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100vw;
+}
+body {
+  width: 100%;
+}
+header {
+  width: 60%;
+  margin: 100px auto 0; /* top, L/R, Bottom */
+  /*
+  gradient 표현하기
+    방향 to right : 왼쪽에서 오른쪽으로
+    기본값은 to bottom : 위에서 아래로
+    시작색상
+    종료색상
+  */
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 243, 74),
+    rgb(133, 245, 133),
+    rgb(156, 156, 255),
+    rgb(255, 129, 129)
+  );
+  padding: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 5px;
+}
+
+section.main {
+  width: 60%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form.main,
+table.list {
+  width: 90%;
+  margin: 5px auto;
+}
+
+form.main {
+  width: 95%;
+  display: flex;
+}
+input {
+  flex: 1;
+  margin-right: 5px;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+input[name="to_content"] {
+  flex: 3;
+  margin-right: 0;
+}
+table.list {
+  flex: 1;
+  width: 90%;
+}
