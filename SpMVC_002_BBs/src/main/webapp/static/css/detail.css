@@ -1,0 +1,35 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #eaf0ff; */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px auto;
+}
+div.detail {
+  border: 1px solid #000;
+  padding: 10px;
+}
+div.detail.date {
+  display: flex;
+  justify-content: space-between;
+}
