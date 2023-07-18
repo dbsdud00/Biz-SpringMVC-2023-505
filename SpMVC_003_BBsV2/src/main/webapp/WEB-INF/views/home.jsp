@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이미지 겔러리</title>
-<link href="${rootPath }/static/css/main.css?2023-07-11-002" rel="stylesheet">
+<link href="${rootPath }/static/css/main.css?2023-07-12-001" rel="stylesheet">
 
 </head>
 <body>
@@ -40,9 +40,10 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<div class= "main button-box">
+	<div class="main button-box">
 		<a href="${rootPath}/insert">추가하기</a>
 	</div>
-
 </body>
 </html>
+
+

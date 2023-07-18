@@ -17,3 +17,4 @@
 - `/WEB-INF/spring/` 폴더에 xml 형태의 파일을 작성하고, 그 파일에 Bean 생성 코드를 작성한다.
 - Spring Project 초기부터 사용하던 방법이다.
 - 아직도 많은 Project 들이 이 방식으로 만들어 지고 있다.
+- `Spring Bean Configuration` 파일은 STS 에서 지원하는 Wizard 기능을 사용하는 것이 가장 문제를 덜 일으킨다.

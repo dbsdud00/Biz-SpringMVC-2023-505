@@ -1,16 +1,16 @@
 @charset "UTF-8";
+
 form.main {
   width: 60%;
   margin: 10px auto;
   border: 1px solid #aaa;
   border-radius: 15px;
 }
-
 form.main div {
   width: 80%;
   margin: 5px auto;
-  display: flex;
   padding: 5px;
+  display: flex;
 }
 
 form.main label,
@@ -23,14 +23,17 @@ form.main label {
   flex: 1;
   text-align: right;
   font-weight: bold;
-  color: #93c4fd;
+  color: rgb(107, 107, 217);
 }
 form.main input {
   flex: 3;
 }
+
 form.main div.button-box {
   text-align: right;
+  border: 1px solid blue;
 }
+
 form.main div.button-box button {
   color: white;
   background-color: blue;
