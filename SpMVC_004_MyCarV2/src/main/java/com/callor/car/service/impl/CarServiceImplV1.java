@@ -1,5 +1,7 @@
 package com.callor.car.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.callor.car.model.CarDto;
@@ -21,6 +23,22 @@ public class CarServiceImplV1 implements CarService {
 	public CarDto findTachoByCarNum(String carnum) {
 		// TODO Auto-generated method stub
 		return carDao.findTachoByCarNum(carnum);
+	}
+
+
+
+	@Override
+	public int insert(CarDto carDto) {
+		// TODO Auto-generated method stub
+		return carDao.insert(carDto);
+	}
+
+
+
+	@Override
+	public List<CarDto> selectAll() {
+		// TODO Auto-generated method stub
+		return carDao.SelectAll();
 	}
 	
 }

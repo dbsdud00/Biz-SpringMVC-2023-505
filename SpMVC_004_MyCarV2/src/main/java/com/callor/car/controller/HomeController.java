@@ -2,8 +2,10 @@ package com.callor.car.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,14 +28,16 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(@ModelAttribute("CAR") CarDto carDto) {
+	public String home(@ModelAttribute("CAR") CarDto carDto, Model model) {
 		log.debug("나는 home이다");
-		return "home";
+		List<CarDto> carList = carService.selectAll();
+		model.addAttribute("CARLIST", carList);
+		return "car/input";
 	}
 	
 	@RequestMapping(value = "/input", method = RequestMethod.POST)
 	public String input(@ModelAttribute("CAR") CarDto carDto) {
-		
+		int result = carService.insert(carDto);
 		return "redirect:/";
 	}
 	
