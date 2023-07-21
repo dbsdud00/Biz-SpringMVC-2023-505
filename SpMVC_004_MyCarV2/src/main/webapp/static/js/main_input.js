@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // input box 에 focus() 를 설정하고 입력된 text 가 있으면
   // text 전체를 블럭으로 설정하라
-  input_carnum.select();
+  input_carnum?.select();
   input_carnum?.addEventListener("blur", async (e) => {
     err_clear();
     // 값이 있는지 검사
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  btn_save.addEventListener("click", () => {
+  btn_save?.addEventListener("click", () => {
     if (
       err_message(input_carnum, err_carnum, ERROR_MESSAGE.CARNUM) &&
       err_message(input_qty, err_qty, ERROR_MESSAGE.QTY) &&
