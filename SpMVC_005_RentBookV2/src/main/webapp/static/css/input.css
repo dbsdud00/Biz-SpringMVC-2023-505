@@ -1,0 +1,33 @@
+@charset "UTF-8";
+form {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  /* 자동 줄바꿈 wrap */
+  /* flex-wrap: wrap; */
+}
+
+form div {
+  flex: 1;
+  margin: 5px;
+}
+form input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+}
+form div:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+form div:last-of-type button {
+  width: auto;
+  margin: 10px 15px;
+  padding: 5px 8px;
+}

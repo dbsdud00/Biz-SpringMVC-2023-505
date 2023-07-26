@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.callor.rent.dao.BookDao">
+ 
+ 	<select id="create_book_table">
+ 		CREATE TABLE IF NOT EXISTS tbl_books (
+			b_code	VARCHAR(13)		PRIMARY KEY,
+			b_name	VARCHAR(125)	NOT NULL	,
+			b_auther	VARCHAR(125)	NOT NULL,	
+			b_comp	VARCHAR(125)		,
+			b_year	INT	NOT NULL	,
+			b_iprice	INT		,
+			b_rprice	INT	NOT NULL	
+		)
+ 	</select>
+
+ 	<insert id="insert" parameterType="BookDto">
+ 		INSERT INTO tbl_books (
+			b_code, b_name, b_auther, b_comp,
+			b_year, b_iprice, b_rprice
+		) VALUES (
+			#{b_code}, #{b_name}, #{b_auther}, #{b_comp},
+			#{b_year}, #{b_iprice}, #{b_rprice}
+		)
+ 	</insert>
+ 	<update id="update">
+ 		UPDATE tbl_books
+ 		SET  
+	 		b_name = #{b_name}, 
+	 		b_auther = #{b_auther}, 
+	 		b_comp = #{b_comp},
+			b_year = #{b_year}, 
+			b_iprice = #{b_iprice}, 
+			b_rprice = #{b_rprice}
+		WHERE b_code = #{b_code}
+ 	
+ 	</update>
+
+ </mapper> 
