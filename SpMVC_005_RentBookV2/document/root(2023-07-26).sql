@@ -76,10 +76,28 @@ SELECT * FROM tbl_rent_book R
 LEFT JOIN tbl_members M
 	ON R.rent_mcode = M.m_code
 LEFT JOIN tbl_books B
-	ON R.rent_bcode = B.b_code
+	ON R.rent_bcode = B.b_code;
 
 
 
+use rentbookdb;
+SELECT * FROM tbl_books ORDER BY b_code;
+-- 전체 데이터 중에서 5페이지에서 10개를 보고싶다
+
+-- 전체 데이터 중에서 1페이지에서 10개 : 1 ~ 9번까지
+-- 1페이지 일 경우 시작값이 1이 될 려면 (Page -1) * 10 + 1
+
+-- 전체 데이터 중에서 2페이지에서 10개 : 10 ~ 19번까지
+-- 2페이지 일 경우 시작값이 10이 되려면 (Page -1) * 10
+
+-- 전체 데이터 중에서 3페이지에서 10개 : 20 ~ 29번까지
+-- 2페이지 일 경우 시작값이 20이 되려면 (Page -1) * 10
+
+-- 처음 시작에서 10개를 건너뛰고 : OFFSET 10
+-- 그 위치에서 10개를 SELECT 하라
+SELECT * FROM tbl_books
+ORDER BY b_code
+LIMIT 10 OFFSET 20;
 
 
 

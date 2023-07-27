@@ -111,3 +111,8 @@ nav li:nth-of-type(5) {
 nav li:hover {
   border-bottom: 1px solid #d6c562;
 }
+nav li.rent,
+nav li.book,
+nav li.login {
+  margin-left: auto;
+}

@@ -7,14 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="${rootPath}/static/css/home.css" rel="stylesheet">
-<link href="${rootPath}/static/css/input.css" rel="stylesheet">
+<link href="${rootPath}/static/css/input1.css" rel="stylesheet">
 </head>
 <body>
-	<header>
 		<h1>회원 정보 관리</h1>
-	</header>
-	<section>
 
 		<table class="member">
 			<tr>
@@ -37,9 +33,5 @@
 			<a href="${rootPath}/">처음으로</a> <a href="${rootPath}/member/input">회원정보
 				추가</a>
 		</div>
-	</section>
-	<footer>
-		<address>CopyRight &copy; All Right Reserved</address>
-	</footer>
 </body>
 </html>

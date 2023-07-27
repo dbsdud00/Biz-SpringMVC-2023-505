@@ -7,7 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="${rootPath}/static/css/home.css" rel="stylesheet">
 <link href="${rootPath}/static/css/input.css" rel="stylesheet">
 </head>
 <body>

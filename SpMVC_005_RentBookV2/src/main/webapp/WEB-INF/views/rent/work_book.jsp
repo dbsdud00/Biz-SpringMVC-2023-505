@@ -29,7 +29,7 @@
 		modelAttribute="RENT_WORK">
 		<div>
 			<label>도서명</label>
-			<div class="search container">			
+			<div class="search container">	
 				<form:input path="b_name" />
 				<div class="search list">
 					search List
