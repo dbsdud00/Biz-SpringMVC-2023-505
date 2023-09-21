@@ -97,7 +97,15 @@ SELECT * FROM tbl_books ORDER BY b_code;
 -- 그 위치에서 10개를 SELECT 하라
 SELECT * FROM tbl_books
 ORDER BY b_code
-LIMIT 10 OFFSET 20;
+LIMIT 10 OFFSET 0;
+
+CREATE DATABASE imageDB;
+use imageDB;
+DESC tbl_bbs;
+DROP TABLE tbl_bbs;
+DROP TABLE tbl_files;
+SELECT * FROM tbl_bbs;
+SELECT * FROM tbl_files;
 
 
 
