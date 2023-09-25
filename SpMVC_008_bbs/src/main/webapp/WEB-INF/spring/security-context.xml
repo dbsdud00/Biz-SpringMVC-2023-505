@@ -17,7 +17,8 @@
 		<sec:intercept-url pattern="/user/mypage" 	access="hasAnyRole('USER', 'ADMIN')" />
 		<sec:intercept-url pattern="/admin" 		access="isAuthenticated() AND hasRole('ADMIN')" />
 		<sec:intercept-url pattern="/home" 			access="hasRole('USER')" />
-		<sec:intercept-url pattern="/**" 			access="isAuthenticated()" />
+		
+		<sec:intercept-url pattern="/**" 			access="permitAll()" />
 
 		<sec:form-login 
 			username-parameter="username"
@@ -26,7 +27,7 @@
 			login-processing-url="/user/login" 
 		/>
 
-		<sec:logout logout-success-url="/home" invalidate-session="true" />
+		<sec:logout logout-success-url="/" invalidate-session="true" />
 	</sec:http>
 
 <!-- 
